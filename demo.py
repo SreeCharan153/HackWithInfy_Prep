@@ -1507,7 +1507,7 @@ for i in range(n-1,-1,-1):
 print(v)'''
 
 #q124
-s = input()
+'''s = input()
 valid = "{}[]()"
 val = {')':'(',']':'[','}':'{'}
 stack = []
@@ -1523,7 +1523,292 @@ for i in s:
             print(False)
             break
 else:
-    print(not stack)
+    print(not stack)'''
+
+#1.Subarray Sum Equals K
+'''
+def subarraySum(nums, k):
+    count = 0
+    total = 0
+    prefix_sums = {0: 1}
+    
+    for num in nums:
+        total += num
+        count += prefix_sums.get(total - k, 0)
+        prefix_sums[total] = prefix_sums.get(total, 0) + 1
+        
+    return count
+'''
+
+# 2. Longest Subarray with Sum K
+
+'''
+def longestSubarrayWithSumK(nums, K):
+    prefix_sum = 0
+    max_len = 0
+    seen = {}
+    
+    for i in range(len(nums)):
+        prefix_sum += nums[i]
+        
+        if prefix_sum == K:
+            max_len = i + 1
+            
+        if prefix_sum - K in seen:
+            max_len = max(max_len, i - seen[prefix_sum - K])
+            
+        if prefix_sum not in seen:
+            seen[prefix_sum] = i
+            
+    return max_len
+'''
+
+#3. Count Distinct Elements in Every Window
+
+'''
+from collections import defaultdict
+
+def countDistinctInWindow(nums, k):
+    freq = defaultdict(int)
+    res = []
+    
+    for i in range(len(nums)):
+        freq[nums[i]] += 1
+        if i >= k:
+            freq[nums[i - k]] -= 1
+            if freq[nums[i - k]] == 0:
+                del freq[nums[i - k]]
+        if i >= k - 1:
+            res.append(len(freq))
+    
+    return res
+'''
+
+#  4. Top K Frequent Elements
+
+'''
+from collections import Counter
+import heapq
+
+def topKFrequent(nums, k):
+    count = Counter(nums)
+    return [item for item, _ in heapq.nlargest(k, count.items(), key=lambda x: x[1])]
+'''
+
+# 5. Isomorphic Strings
+
+'''
+def isIsomorphic(s, t):
+    return len(set(zip(s, t))) == len(set(s)) == len(set(t))
+'''
+
+# 6. Longest Palindromic Substring
+
+#Already answered — check above
+
+# 7. Minimum Window Substring
+
+'''
+from collections import Counter
+
+def minWindow(s, t):
+    if not t or not s:
+        return ""
+    
+    t_count = Counter(t)
+    window = {}
+    have, need = 0, len(t_count)
+    res, res_len = [-1, -1], float('inf')
+    l = 0
+    
+    for r in range(len(s)):
+        c = s[r]
+        window[c] = window.get(c, 0) + 1
+        
+        if c in t_count and window[c] == t_count[c]:
+            have += 1
+        
+        while have == need:
+            if (r - l + 1) < res_len:
+                res = [l, r]
+                res_len = r - l + 1
+            
+            window[s[l]] -= 1
+            if s[l] in t_count and window[s[l]] < t_count[s[l]]:
+                have -= 1
+            l += 1
+            
+    l, r = res
+    return s[l:r+1] if res_len != float('inf') else ""
+'''
+
+
+
+# 8. Four Sum
+
+'''
+def fourSum(nums, target):
+    nums.sort()
+    res = []
+    n = len(nums)
+    
+    for i in range(n):
+        for j in range(i+1, n):
+            l, r = j+1, n-1
+            while l < r:
+                total = nums[i] + nums[j] + nums[l] + nums[r]
+                if total == target:
+                    quad = [nums[i], nums[j], nums[l], nums[r]]
+                    if quad not in res:
+                        res.append(quad)
+                    l += 1
+                    r -= 1
+                elif total < target:
+                    l += 1
+                else:
+                    r -= 1
+    return res
+'''
+
+
+# 9. Ransom Note
+'''
+
+from collections import Counter
+
+def canConstruct(ransomNote, magazine):
+    return not Counter(ransomNote) - Counter(magazine)
+'''
+
+# 10. Group Shifted Strings
+
+'''
+from collections import defaultdict
+
+def groupStrings(strings):
+    groups = defaultdict(list)
+    
+    for s in strings:
+        shift = tuple((ord(char) - ord(s[0])) % 26 for char in s)
+        groups[shift].append(s)
+    
+    return list(groups.values())
+'''
+
+# 11. Repeated DNA Sequences
+
+'''
+def findRepeatedDnaSequences(s):
+    seen = set()
+    repeated = set()
+    
+    for i in range(len(s) - 9):
+        seq = s[i:i+10]
+        if seq in seen:
+            repeated.add(seq)
+        else:
+            seen.add(seq)
+    
+    return list(repeated)
+'''
+
+# 12. Anagrams in a String
+
+'''
+from collections import Counter
+
+def findAnagrams(s, p):
+    res = []
+    p_count = Counter(p)
+    s_count = Counter()
+    
+    for i in range(len(s)):
+        s_count[s[i]] += 1
+        if i >= len(p):
+            if s_count[s[i - len(p)]] == 1:
+                del s_count[s[i - len(p)]]
+            else:
+                s_count[s[i - len(p)]] -= 1
+        
+        if s_count == p_count:
+            res.append(i - len(p) + 1)
+    
+    return res
+'''
+
+
+# 13. Custom Sort String
+
+'''
+
+def customSortString(order, s):
+    count = Counter(s)
+    res = []
+    
+    for char in order:
+        res.append(char * count[char])
+        count[char] = 0
+    
+    for char in count:
+        res.append(char * count[char])
+    
+    return ''.join(res)
+'''
+
+
+#14.Max Points on a Line
+
+'''
+
+from collections import defaultdict
+
+def maxPoints(points):
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+
+    max_count = 0
+    
+    for i in range(len(points)):
+        slopes = defaultdict(int)
+        overlap = 0
+        curr_max = 0
+        x1, y1 = points[i]
+        
+        for j in range(i+1, len(points)):
+            x2, y2 = points[j]
+            dx, dy = x2 - x1, y2 - y1
+            
+            if dx == 0 and dy == 0:
+                overlap += 1
+                continue
+            
+            g = gcd(dx, dy)
+            slope = (dx // g, dy // g)
+            slopes[slope] += 1
+            curr_max = max(curr_max, slopes[slope])
+        
+        max_count = max(max_count, curr_max + overlap + 1)
+    
+    return max_count
+'''
+
+
+# 15. Count Pairs with Given Sum
+'''
+from collections import Counter
+
+def countPairs(nums, k):
+    count = 0
+    freq = Counter()
+    
+    for num in nums:
+        count += freq[k - num]
+        freq[num] += 1
+    
+    return count
+'''
 
 #for Fearther codes and problems visit my LeetCode Account
 #https://leetcode.com/u/sreecharan750/
