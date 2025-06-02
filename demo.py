@@ -1479,9 +1479,8 @@ for i in range(len(l)):
         lz+=1
 for i in range(lz,len(l)):
     l[i] = 0
-print(l)'''
-
-'''l = list(map(int,input().split(",")))
+print(l)
+l = list(map(int,input().split(",")))
 n = len(l)
 v = []
 for i in range(n):
@@ -1541,7 +1540,6 @@ def subarraySum(nums, k):
 '''
 
 # 2. Longest Subarray with Sum K
-
 '''
 def longestSubarrayWithSumK(nums, K):
     prefix_sum = 0
@@ -1564,7 +1562,6 @@ def longestSubarrayWithSumK(nums, K):
 '''
 
 #3. Count Distinct Elements in Every Window
-
 '''
 from collections import defaultdict
 
@@ -1585,7 +1582,6 @@ def countDistinctInWindow(nums, k):
 '''
 
 #  4. Top K Frequent Elements
-
 '''
 from collections import Counter
 import heapq
@@ -1596,18 +1592,15 @@ def topKFrequent(nums, k):
 '''
 
 # 5. Isomorphic Strings
-
 '''
 def isIsomorphic(s, t):
     return len(set(zip(s, t))) == len(set(s)) == len(set(t))
 '''
 
 # 6. Longest Palindromic Substring
-
 #Already answered — check above
 
 # 7. Minimum Window Substring
-
 '''
 from collections import Counter
 
@@ -1642,10 +1635,7 @@ def minWindow(s, t):
     return s[l:r+1] if res_len != float('inf') else ""
 '''
 
-
-
 # 8. Four Sum
-
 '''
 def fourSum(nums, target):
     nums.sort()
@@ -1670,7 +1660,6 @@ def fourSum(nums, target):
     return res
 '''
 
-
 # 9. Ransom Note
 '''
 
@@ -1681,7 +1670,6 @@ def canConstruct(ransomNote, magazine):
 '''
 
 # 10. Group Shifted Strings
-
 '''
 from collections import defaultdict
 
@@ -1696,7 +1684,6 @@ def groupStrings(strings):
 '''
 
 # 11. Repeated DNA Sequences
-
 '''
 def findRepeatedDnaSequences(s):
     seen = set()
@@ -1713,7 +1700,6 @@ def findRepeatedDnaSequences(s):
 '''
 
 # 12. Anagrams in a String
-
 '''
 from collections import Counter
 
@@ -1736,11 +1722,8 @@ def findAnagrams(s, p):
     return res
 '''
 
-
 # 13. Custom Sort String
-
 '''
-
 def customSortString(order, s):
     count = Counter(s)
     res = []
@@ -1755,11 +1738,8 @@ def customSortString(order, s):
     return ''.join(res)
 '''
 
-
 #14.Max Points on a Line
-
 '''
-
 from collections import defaultdict
 
 def maxPoints(points):
@@ -1793,7 +1773,6 @@ def maxPoints(points):
     
     return max_count
 '''
-
 
 # 15. Count Pairs with Given Sum
 '''
