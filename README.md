@@ -21,15 +21,31 @@ HackWithInfy is no joke. To win, you gotta be sharp, consistent, and battle-test
 
 ## Topics Covered
 
-| Topic              | # Problems | Status            |
-|--------------------|------------|-------------------|
-| Arrays & Strings   | 20         | Completed         |
-| Stacks & Queues    | 15         | Completed         |
-| Hashing & Maps     | 15         | In Progress       |
-| Sorting & Searching| 10         | Pending           |
-| Dynamic Programming| 15         | Pending           |
-| Graphs & Trees     | 20         | Pending           |
-| Mathematics & Bit Manipulation | 10  | Pending      |
+## Topics Covered
+
+| Topic                     | # Problems | Status         |
+|---------------------------|------------|----------------|
+| Arrays & Strings          | 20         | ✅ Completed  |
+| Hashing & Maps            | 15         | ✅ Completed   |
+| Stack & Queue             | 15         | ✅ Completed   |
+| Linked List               | 15         | 🚧 In Progress |
+| Binary Trees              | 15         | ⏳ Pending     |
+| Recursion & Backtracking  | 15         | ⏳ Pending     |
+| Sliding Window & Two Pointers | 15     | ⏳ Pending     |
+| Dynamic Programming       | 20         | ⏳ Pending     |
+| Greedy Algorithms         | 10         | ⏳ Pending     |
+| Sorting & Searching       | 10         | ⏳ Pending     |
+| Binary Search Trees       | 10         | ⏳ Pending     |
+| Graphs                   | 20         | ⏳ Pending     |
+| Shortest Paths            | 10         | ⏳ Pending     |
+| Bit Manipulation          | 10         | ⏳ Pending     |
+| Mathematics               | 10         | ⏳ Pending     |
+| Tries & Strings           | 10         | ⏳ Pending     |
+| Heaps                     | 10         | ⏳ Pending     |
+| Disjoint Set              | 10         | ⏳ Pending     |
+| Segment Trees & BIT       | 10         | ⏳ Pending     |
+| Simulation & Design       | 15         | ⏳ Pending     |
+
 
 *Note: Numbers and statuses updated as I progress.*
 
