@@ -67,4 +67,4 @@ If you want to follow along or use this as a study reference:
 
 1. Clone the repo:
    ```bash
-   git clone[ https://github.com/SreeCharan153/HackWithInfy_Prep.git]
+   git clone https://github.com/SreeCharan153/HackWithInfy_Prep.git
