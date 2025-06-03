@@ -23,13 +23,13 @@ HackWithInfy is no joke. To win, you gotta be sharp, consistent, and battle-test
 
 | Topic              | # Problems | Status            |
 |--------------------|------------|-------------------|
-| Arrays & Strings   | 20+        | In Progress       |
+| Arrays & Strings   | 20         | Completed         |
 | Stacks & Queues    | 15         | Completed         |
-| Hashing & Maps     | 25+        | In Progress       |
+| Hashing & Maps     | 15         | In Progress       |
 | Sorting & Searching| 10         | Pending           |
-| Dynamic Programming| 30+        | Pending           |
-| Graphs & Trees     | 20+        | Pending           |
-| Mathematics & Bit Manipulation | 10+ | Pending      |
+| Dynamic Programming| 15         | Pending           |
+| Graphs & Trees     | 20         | Pending           |
+| Mathematics & Bit Manipulation | 10  | Pending      |
 
 *Note: Numbers and statuses updated as I progress.*
 
