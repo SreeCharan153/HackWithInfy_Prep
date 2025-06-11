@@ -1795,3 +1795,36 @@ def countPairs(nums, k):
 
 #for Fearther codes and problems visit my LeetCode Account
 #https://leetcode.com/u/sreecharan750/
+
+'''s = input()
+vowels = 'aeiouAEIOU'
+vowel_list = sorted([char for char in s if char in vowels])
+result = []
+vowel_index = 0
+for char in s:
+    if char in vowels:
+        result.append(vowel_list[vowel_index])
+        vowel_index += 1
+    else:
+        result.append(char)
+
+print("".join(result))'''
+
+'''nums = list(map(int, input().split()))
+curr_max = curr_min = overall_max = nums[0]
+for i in nums[1:]:
+    temp_max = max(i, i * curr_max, i * curr_min)
+    curr_min = min(i, i * curr_max, i * curr_min)
+    curr_max = temp_max
+    overall_max = max(overall_max, curr_max)
+print(overall_max)'''
+
+'''nums = list(map(int, input().split(',')))
+curr_max = curr_min = overall_max = nums[0]
+for i in nums[1:]:
+    temp_max = max(i, i + curr_max, i + curr_min)
+    curr_min = min(i, i + curr_max, i + curr_min)
+    curr_max = temp_max
+    overall_max = max(overall_max, curr_max)
+print(overall_max)'''
+
