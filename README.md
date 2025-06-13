@@ -39,7 +39,7 @@ HackWithInfy is no joke. To win, you gotta be sharp, consistent, and battle-test
 | Graphs                   | 20         | ⏳ Pending     |
 | Shortest Paths            | 10         | ⏳ Pending     |
 | Bit Manipulation          | 10         | ⏳ Pending     |
-| Mathematics               | 10         | ⏳ Pending     |
+| Mathematics               | 10         | ✅ Completed     |
 | Tries & Strings           | 10         | ⏳ Pending     |
 | Heaps                     | 10         | ⏳ Pending     |
 | Disjoint Set              | 10         | ⏳ Pending     |

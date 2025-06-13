@@ -1524,6 +1524,10 @@ for i in s:
 else:
     print(not stack)'''
 
+#q125(find index of peak)
+'''l = list(map(int,input().split(',')))
+print(l.index(max(l)))'''
+
 #1.Subarray Sum Equals K
 '''
 def subarraySum(nums, k):
@@ -1598,7 +1602,7 @@ def isIsomorphic(s, t):
 '''
 
 # 6. Longest Palindromic Substring
-#Already answered — check above
+# Already answered — check above
 
 # 7. Minimum Window Substring
 '''
@@ -1641,7 +1645,6 @@ def fourSum(nums, target):
     nums.sort()
     res = []
     n = len(nums)
-    
     for i in range(n):
         for j in range(i+1, n):
             l, r = j+1, n-1
@@ -1775,9 +1778,7 @@ def maxPoints(points):
 '''
 
 # 15. Count Pairs with Given Sum
-'''
-from collections import Counter
-
+'''from collections import Counter
 def countPairs(nums, k):
     count = 0
     freq = Counter()
@@ -1788,6 +1789,69 @@ def countPairs(nums, k):
     
     return count
 '''
+
+'''s = input()
+vowels = 'aeiouAEIOU'
+vowel_list = sorted([char for char in s if char in vowels])
+result = []
+vowel_index = 0
+for char in s:
+    if char in vowels:
+        result.append(vowel_list[vowel_index])
+        vowel_index += 1
+    else:
+        result.append(char)
+
+print("".join(result))'''
+
+'''nums = list(map(int, input().split()))
+curr_max = curr_min = overall_max = nums[0]
+for i in nums[1:]:
+    temp_max = max(i, i * curr_max, i * curr_min)
+    curr_min = min(i, i * curr_max, i * curr_min)
+    curr_max = temp_max
+    overall_max = max(overall_max, curr_max)
+print(overall_max)'''
+
+'''nums = list(map(int, input().split(',')))
+curr_max = curr_min = overall_max = nums[0]
+for i in nums[1:]:
+    temp_max = max(i, i + curr_max, i + curr_min)
+    curr_min = min(i, i + curr_max, i + curr_min)
+    curr_max = temp_max
+    overall_max = max(overall_max, curr_max)
+print(overall_max)'''
+
+'''n = list(input().strip("[]").split(','))
+stack = []
+mat = "+-*/"
+sum = 0
+for i in n:
+    if i not in mat:
+        stack.append(int(i))
+    else:
+        v1,v2 = stack.pop(),stack.pop()
+        if i == '+':
+            stack.append(v2+v1)
+        elif i=='-':
+            stack.append(v2-v1)
+        elif i=='*':
+            stack.append(v2*v1)
+        elif i=='/':
+            stack.append(int(v2/v1))
+print(stack.pop())'''
+
+'''n = list(map(int,input().split(",")))
+res = []
+for i in range(len(n)):
+    c = 1
+    for j in range(i+1,len(n)):
+        if n[j]>n[i]:
+            res.append(c)
+            break
+        else:
+            c = c+1
+print(res)'''
 
 #for Fearther codes and problems visit my LeetCode Account
 #https://leetcode.com/u/sreecharan750/
