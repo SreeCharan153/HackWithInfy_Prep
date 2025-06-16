@@ -1853,5 +1853,22 @@ for i in range(len(n)):
             c = c+1
 print(res)'''
 
-#for Fearther codes and problems visit my LeetCode Account
+'''from multipledispatch import dispatch
+class demo:
+    @dispatch(int, int)
+    def add(a, b):
+        return a + b
+    @dispatch(float, float)
+    def add(a, b):
+        return a + b
+    @dispatch(str, str)
+    def add(a, b):
+        return a + b
+d = demo()
+print(d.add(5, 10))
+print(d.add(5.5, 10.5))
+print(d.add("Hello, ", "World!"))'''
+
+
+#for Further codes and problems visit my LeetCode Account
 #https://leetcode.com/u/sreecharan750/
