@@ -1906,6 +1906,116 @@ while temp :
     print(temp.data, end=" ")
     temp = temp.next'''
 
+# q128
+'''class node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+l = list(map(int,input().split()))
+head = node(l[0])
+temp = head
+for i in l[1:]:
+        n = node(i)
+        temp.next = n
+        temp = temp.next
+temp = head
+n = node(int(input()))
+while temp.next :
+    temp = temp.next
+temp.next = n
+temp = head
+while temp :
+    print(temp.data, end=" ")
+    temp = temp.next'''
+
+#q129
+'''class node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+l = list(map(int,input().split()))
+head = node(l[0])
+temp = head
+for i in l[1:]:
+        n = node(i)
+        temp.next = n
+        temp = temp.next
+temp = head
+while temp.next.data != 6:
+     temp = temp.next
+n = node(int(input()))
+n.next = temp.next
+temp.next = n
+temp = head
+while temp :
+    print(temp.data, end=" ")
+    temp = temp.next'''
+
+#q130
+'''class node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+l = list(map(int,input().split()))
+head = node(l[0])
+temp = head
+for i in l[1:]:
+        n = node(i)
+        temp.next = n
+        temp = temp.next
+temp = head
+n =int(input())
+while temp.next.data != n:
+     temp = temp.next
+temp.next = temp.next.next
+temp = head
+while temp :
+    print(temp.data, end=" ")
+    temp = temp.next'''
+
+#q131
+'''class node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+l = list(map(int,input().split()))
+head = node(l[0])
+temp = head
+for i in l[1:]:
+        n = node(i)
+        temp.next = n
+        temp = temp.next
+f,s = head, head
+while f and f.next:
+     f = f.next.next
+     s = s.next
+print(s.data)'''
+
+#q132
+'''class node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+l = list(map(int,input().split()))
+head = node(l[0])
+temp = head
+for i in l[1:]:
+        n = node(i)
+        temp.next = n
+        temp = temp.next
+prev = None
+cur = head
+while cur:
+    nn = cur.next
+    cur.next = prev
+    prev = cur
+    cur = nn
+head = prev
+temp = head
+while temp:
+    print(temp.data, end=" ")
+    temp = temp.next'''
+
 
 
 #for Further codes and problems visit my LeetCode Account
