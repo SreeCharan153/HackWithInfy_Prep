@@ -1869,6 +1869,24 @@ print(d.add(5, 10))
 print(d.add(5.5, 10.5))
 print(d.add("Hello, ", "World!"))'''
 
+# q126
+'''class node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+l = list(map(int,input().split()))
+head = node(l[0])
+temp = head
+for i in l[1:]:
+        n = node(i)
+        temp.next = n
+        temp = temp.next
+temp = head
+while temp :
+    print(temp.data, end=" ")
+    temp = temp.next'''
+
+
 
 #for Further codes and problems visit my LeetCode Account
 #https://leetcode.com/u/sreecharan750/
