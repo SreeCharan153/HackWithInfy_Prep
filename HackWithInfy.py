@@ -2133,7 +2133,62 @@ while temp2 and temp2.next:
         print("Circular")
         break'''
 
+# q137
+'''class node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+l = list(map(int, input().split()))
+l1 = list(map(int, input().split()))
+head1 = node(l[0])
+head2 = node(l1[0])
+temp1 = head1
+temp2 = head2
+for i in l[1:]:
+    n = node(i)
+    temp1.next = n
+    temp1 = temp1.next
+for i in l1[1:]:
+    n = node(i)
+    temp2.next = n
+    temp2 = temp2.next
+s1 = []
+temp1 = head1
+temp2 = head2
+while temp1:
+    s1.append(temp1.data)
+    temp1 = temp1.next
+v1 = 0
+while s1:
+    v1 = v1 * 10 + s1.pop()
+while temp2:
+    s1.append(temp2.data)
+    temp2 = temp2.next
+v2 = 0
+while s1:
+    v2 = v2 * 10 + s1.pop()
+v3 = v1 + v2
+head3 = node(v3 % 10)
+temp = head3
+v3 //= 10
+while v3:
+    n = node(v3 % 10)
+    temp.next = n
+    temp = temp.next
+    v3 //= 10
+temp = head3
+while temp:
+    print(temp.data, end=" ")
+    temp = temp.next'''
 
-
+# q138
+n,v = map(int, input().split())
+f = False
+l = list(map(int, input().split()))
+for i in range(n):
+    for j in range(i,n):
+        if sum(l[i:j+1]) == v:
+            print(i,j)
+            break
 #for Further codes and problems visit my LeetCode Account
 #https://leetcode.com/u/sreecharan750/
