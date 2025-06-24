@@ -2182,13 +2182,63 @@ while temp:
     temp = temp.next'''
 
 # q138
-n,v = map(int, input().split())
+'''n,v = map(int, input().split())
 f = False
 l = list(map(int, input().split()))
 for i in range(n):
     for j in range(i,n):
         if sum(l[i:j+1]) == v:
             print(i,j)
-            break
+            break'''
+
+# q139
+'''class node:
+    def __init__(self, data):
+        self.prev = None
+        self.data = data
+        self.next = None
+l = list(map(int, input().split()))
+head = node(l[0])
+temp = head
+for i in l[1:]:
+    n = node(i)
+    temp.next = n
+    n.prev = temp
+    temp = temp.next
+n = int(input())
+temp = head
+while temp:
+    if temp.data == n:
+        if temp.prev:
+            temp.prev.next = temp.next
+        if temp.next:
+            temp.next.prev = temp.prev
+        if temp == head:
+            head = temp.next
+    temp = temp.next
+temp = head
+while temp:
+    print(temp.data, end=" ")
+    temp = temp.next'''
+
+# q140
+'''l = list(map(int, input().split()))
+target = int(input())
+left, right = 0, len(l) - 1
+found = False
+while left < right:
+    if l[left] + l[right] == target:
+        print(left, right)
+        found = True
+    elif l[left] + l[right] < target:
+        left += 1
+    else:
+        right -= 1
+if not found:
+    print("No pair found")'''
+
+#141
+
+
 #for Further codes and problems visit my LeetCode Account
 #https://leetcode.com/u/sreecharan750/
