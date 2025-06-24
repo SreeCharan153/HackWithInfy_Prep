@@ -2112,7 +2112,7 @@ while temp1:
     print(temp1.data, end=" ")
     temp1 = temp1.next'''
 
-#q136(find if a linked list is circular or not)\
+#q136(find if a linked list is circular or not)
 '''class node:
     def __init__(self, data):
         self.data = data
@@ -2238,7 +2238,11 @@ if not found:
     print("No pair found")'''
 
 #141
-
+#correct the expression
+#case1 input: "3ab" output: "3*a*b"
+#case2 input: "32ab" output: "32*a*b"
+#case3 input: "3(a+4b)" output: "3*(a+4*b)"
+#case4 input: "3(22a+b)(abc+4b+33)" output: "3*(22*a+b)*(a*b*c+4*b+33)"
 
 #for Further codes and problems visit my LeetCode Account
 #https://leetcode.com/u/sreecharan750/
