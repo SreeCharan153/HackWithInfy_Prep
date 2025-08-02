@@ -2238,6 +2238,30 @@ if not found:
     print("No pair found")'''
 
 #141
+'''def bs(a, t, l, r):
+    if l > r:
+        return -1
+    mid = (l + r) // 2
+    if a[mid] == t:
+        return mid
+    elif a[mid] < t:
+        return bs(a, t, mid + 1, r)
+    else:
+        return bs(a, t, l, mid - 1)
+a = list(map(int, input().split(',')))
+t = int(input())
+r = bs(a, t, 0, len(a) - 1)
+if r != -1:
+    print(r)
+else:
+    print("Not found")'''
+
+#142
+'''def count(l):
+    for idx, val in enumerate(l):
+        if val >= 0:
+            return idx
+    return len(l)'''
 
 
 #for Further codes and problems visit my LeetCode Account
