@@ -2263,6 +2263,46 @@ else:
             return idx
     return len(l)'''
 
+#143
+'''l = list(map(int, input().split(',')))
+m1, m2 = float('-inf'), float('-inf')
+for i in l[1:]:
+    if i > m1:
+        m2 = m1
+        m1 = i
+    elif i > m2 and i != m1:
+        m2 = i
+print(m2)'''
 
+#144
+'''n = int(input())
+if n & 1:
+    print("Odd")
+else:
+    print("Even")'''
+    
+#145
+'''l = list(map(int, input().split(',')))
+for i in range(len(l)//2):
+    l[i], l[len(l)-1-i] = l[len(l)-1-i], l[i]
+print(l)'''
+
+#146
+'''l = list(map(int, input().split(',')))
+n = len(l)
+for i in range(n//2):
+    if l[i] > l[n-1-i]:
+        l[i], l[n-1-i] = l[n-1-i], l[i]
+print(l)'''
+
+#147(power of a number using recursion)
+def power(base, exp):
+    if exp == 0:
+        return 1
+    return base * power(base, exp - 1)
+base = int(input("Enter the base: "))
+exp = int(input("Enter the exponent: "))
+result = power(base, exp)
+print(f"{base} raised to the power {exp} is {result}")
 #for Further codes and problems visit my LeetCode Account
 #https://leetcode.com/u/sreecharan750/
