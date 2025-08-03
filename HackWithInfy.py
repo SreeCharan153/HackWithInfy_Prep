@@ -2295,14 +2295,27 @@ for i in range(n//2):
         l[i], l[n-1-i] = l[n-1-i], l[i]
 print(l)'''
 
-#147(power of a number using recursion)
-def power(base, exp):
+#147
+'''def power(base, exp):
     if exp == 0:
         return 1
     return base * power(base, exp - 1)
 base = int(input("Enter the base: "))
 exp = int(input("Enter the exponent: "))
 result = power(base, exp)
-print(f"{base} raised to the power {exp} is {result}")
+print(f"{base} raised to the power {exp} is {result}")'''
+
+#148(fibonacci series using Dynamic Programming)
+def fibonacci(n, memo={}):
+    if n in memo:
+        return memo[n]
+    if n <= 1:
+        return n
+    memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo)
+    return memo[n]
+n = int(input("Enter the number of terms: "))
+fib_series = [fibonacci(i) for i in range(n)]
+print("Fibonacci series:", fib_series)
+    
 #for Further codes and problems visit my LeetCode Account
 #https://leetcode.com/u/sreecharan750/
